@@ -14,9 +14,9 @@ export default function Navbar(){
     const isActive = (path) => path === pathname;
     return (
         <>
-            <nav className = "">
-                <div className = "">
-                    <ul>
+            <nav className = "flex h-28 justify-between items-center bg-white pe-2.5 mx-auto font-[Poppins]" >
+                <div className = "bg-white m-28">
+                    <ul className = "flex md:flex-row flex-col items-center gap-[4vw]">
                         {navigation.map(({path,name})=>(
                             
                             <li key = {path}>
