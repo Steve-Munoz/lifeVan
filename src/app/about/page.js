@@ -10,9 +10,9 @@ export default function About(){
             <Image
             src ={bgImg}
             alt = "home picture of van"
-            className = "w-full h-auto mb-5"
+            className = "w-full h-100 m-auto"
             />
-            <div className ="grid grid-cols-2">
+            <div className ="grid grid-cols-2 mt-5 mb-20">
 
                 <div className = "ps-[23px] pe-[23px] text-[#161616] rounded-[10px] bg-[#FFCC8D] pb-[32px] ms-[27px] me-[27px]">
                 <h1 className = "leading-[38px] py-[10px] font-sans font-bold text-2xl"> Don’t squeeze in a sedan when you could relax in a van.</h1>
