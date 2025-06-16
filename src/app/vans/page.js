@@ -1,6 +1,50 @@
+"use client"
+import Link from 'next/link'
+import React, {useEffect, useState} from "react"
+import "../server"
+
 export default function Vans(){
+    const [vans, setVans] = useState([])
+    useEffect(()=>{fetch("api/vans").then(res=> res.json()).then(data=> setVans(data.vans))
+
+    },[])
+    console.log(vans)
+    const vanElements = vans.map(van =>
+        <div key ={van.id}>
+            <Link href ={`/vans/${van.id}`}>
+            <img src ={van.imageUrl}/>
+            <div>
+                <h3>{van.name}</h3>
+                <p>${van.price}<span>/day</span></p>
+            </div>
+            <i className = {`van-type ${van.type} selected`}>{van.type}</i>
+            </Link>
+        </div>
+    )
+    // const vanElements = vans.map(van =>
+    //     <div key= {van.id} className ="van-title">
+    //         <Link href ={`/vans/${van.id}`}>
+    //         <img src = {van.imageUrl}/>
+    //         <div className = "van-info">
+    //             <h3>{van.name}</h3>
+    //             <p>${van.price}<span>/day</span></p>
+
+    //         </div>
+    //         <i className = {`van-type ${van.type} selected`}>{van.type}</i>
+            
+    //         </Link>
+
+    //     </div>
+
+    // )
     return(
         <>
+            <div>
+                <h1>Explore our van options</h1>
+                <div>{vanElements}</div>
+                <Link href="/">Return to Home Page</Link>
+
+            </div>
         
         </>
     )
