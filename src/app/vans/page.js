@@ -9,7 +9,7 @@ export default function Vans(){
 
     },[])
     const vanElements = vans.map(van =>
-        <div key ={van.id}>
+        <div className ="border border-gray-200 " key ={van.id}>
             <Link href ={`/vans/${van.id}`}>
             <img className = "size-150" src ={van.imageUrl}/>
             <div>
