@@ -11,8 +11,8 @@ export default function VanDetails({params}){
         <div>
             <h1>Van Details: ID: {params.vanid}</h1>
             {vanDetails ? (
-                <div>
-                    <img src = {vanDetails.imageUrl}/>
+                <div className = "flex flex-col min-h-screen">
+                    <img className ="size-150"src = {vanDetails.imageUrl}/>
                     <i className = {`van-type ${vanDetails.type}`}>{vanDetails.type}</i>
                     <h2>{vanDetails.name}</h2>
                     <p>${vanDetails.price}<span>/day</span></p>

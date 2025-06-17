@@ -23,9 +23,9 @@ export default function Vans(){
     
     return(
         <>
-            <div>
+            <div className ="flex flex-col">
                 <h1>Explore our van options</h1>
-                <div>{vanElements}</div>
+                <div className ="flex-grow">{vanElements}</div>
                 <Link href="/">Return to Home Page</Link>
 
             </div>
