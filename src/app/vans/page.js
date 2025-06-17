@@ -11,7 +11,7 @@ export default function Vans(){
     const vanElements = vans.map(van =>
         <div key ={van.id}>
             <Link href ={`/vans/${van.id}`}>
-            <img src ={van.imageUrl}/>
+            <img className = "size-150" src ={van.imageUrl}/>
             <div>
                 <h3>{van.name}</h3>
                 <p>${van.price}<span>/day</span></p>
@@ -25,7 +25,7 @@ export default function Vans(){
         <>
             <div className ="flex flex-col">
                 <h1>Explore our van options</h1>
-                <div className ="flex-grow">{vanElements}</div>
+                <div className ="flex-grow ">{vanElements}</div>
                 <Link href="/">Return to Home Page</Link>
 
             </div>
