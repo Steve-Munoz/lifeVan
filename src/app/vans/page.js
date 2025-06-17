@@ -8,7 +8,6 @@ export default function Vans(){
     useEffect(()=>{fetch("api/vans").then(res=> res.json()).then(data=> setVans(data.vans))
 
     },[])
-    console.log(vans)
     const vanElements = vans.map(van =>
         <div key ={van.id}>
             <Link href ={`/vans/${van.id}`}>
