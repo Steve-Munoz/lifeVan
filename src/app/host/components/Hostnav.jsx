@@ -14,11 +14,11 @@ export default function Hostnav(){
     const isActive = (path) => path === pathname;
     return(
         <>
-        <nav>
-            <ul>
+        <nav className = "flex flex-col h-10 justify-between items-center bg-orange-200 pe-2.5 ps-2.5 mx-auto font-[Poppins">
+            <ul className = "flex md:flex-row flex-col items-center gap-[4vw]">
                 {navigation.map(({path,name})=>(
                     <li key = {path}>
-                        <Link href ={path}>
+                        <Link className = {`${isActive(path) ? 'underline font-medium': ""} underline-offset-1 text-[17px]`} href ={path}>
                             <span>{name}</span>
 
                         </Link>
