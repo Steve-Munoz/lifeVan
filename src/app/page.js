@@ -5,8 +5,8 @@ export default function Home() {
   const styling = {backgroundImage: `url('${homeHero.src}')`}
   return (
     <>
-      <div style ={styling} className = 'flex flex-col min-h-100 bg-center bg-cover text-white py-11 px-6'>
-        <div className = "bg-[#FF8C38]/40 p-[10px] rounded-md">
+      <div  className = 'flex flex-col min-h-screen'>
+        <div style ={styling} className = "bg-[#FF8C38]/40 min-h-100 p-[10px] bg-center bg-cover text-white py-11 px-6 rounded-md">
           <h1 className = "font-bold text-3xl opacity-100 leading-10">You got the travel plans, we got the travel vans. </h1>
           <p className = "leading-6 font-bold"> Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</p>
         </div>
