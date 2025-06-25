@@ -12,21 +12,21 @@ export default function HostListedVans(){
   console.log(hostVanCards)
 
      const vanElements = hostVanCards.map(van=>(
-    <div key = {van.id} className = "van-title">
+    <div key = {van.id} className = "max-w-sm rounded-2xl mb-4 overflow-hidden shadow-lg">
       <Link href={`host/vans/${van.id}`}>
-      <img src = {van.imageUrl}/>
-      <div className = "van-info"> 
-        <h3>{van.name}</h3>
-        <p>${van.price}<span>/day</span></p>
+      <img className =" w-full" src = {van.imageUrl}/>
+      <div className = "van-info px-6 py-4"> 
+        <h3 className = "font-bold text-xl mb-2">{van.name}</h3>
+        <p className ="text-gray-700 text-base">${van.price}<span>/day</span></p>
       </div>
-      <i className={`van-type ${van.type} selected`}>{van.type}</i>
       </Link>
     </div>
   ))
   
     return(
         <>
-        <div className ="flex flex-col">
+        <div className ="flex flex-col ">
+            <h1 className ="bold text-50">Your Listed Vans</h1>
             {/* <img src={hostVanCards.imageUrl}/> */}
            
             {vanElements}
