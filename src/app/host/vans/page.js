@@ -13,7 +13,7 @@ export default function HostListedVans(){
 
      const vanElements = hostVanCards.map(van=>(
     <div key = {van.id} className = "max-w-sm rounded-2xl mb-4 overflow-hidden shadow-lg">
-      <Link href={`host/vans/${van.id}`}>
+      <Link href={`/vans/${van.id}`}>
       <img className =" w-full" src = {van.imageUrl}/>
       <div className = "van-info px-6 py-4"> 
         <h3 className = "font-bold text-xl mb-2">{van.name}</h3>
