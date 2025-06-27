@@ -42,5 +42,14 @@ createServer({
             return schema.vans.find(vanid)
             // return schema.vans.all()
         })
+
+        this.get("/host/vans/:vanid/pricing", (schema, request) => {
+            // Hard-code the hostId for now
+            const id = request.params.vanid
+            // return schema.vans.findBy({ id, hostId: "123" })
+            return schema.vans.find(vanid)
+            // return schema.vans.findBy({ id, hostId: "123" })
+            // return schema.vans.all()
+        })
     }
 })

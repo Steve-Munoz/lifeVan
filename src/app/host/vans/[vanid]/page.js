@@ -20,9 +20,13 @@ export default function HostSelectedVan(){
 
     return(
         <>
-        <div>
-            test
-            </div>
+    <div className = "max-w-sm rounded-2xl mb-4 overflow-hidden shadow-lg">
+      <img className =" w-full" src = {currentHostVan.imageUrl}/>
+      <div className = "van-info px-6 py-4"> 
+        <h3 className = "font-bold text-xl mb-2">{currentHostVan.name}</h3>
+        <p className ="text-gray-700 text-base">${currentHostVan.price}<span>/day</span></p>
+      </div>
+    </div>
         </>
     )
 }
