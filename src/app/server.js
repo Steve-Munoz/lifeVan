@@ -26,19 +26,20 @@ createServer({
         this.get("/vans/:id", (schema, request) => {
             const id = request.params.id
             return schema.vans.find(id)
+            
         })
 
         this.get("/host/vans", (schema, request) => {
             // Hard-code the hostId for now
-            return schema.vans.where({ hostId: "123" })
-            // return schema.vans.all()
+            // return schema.vans.where({ hostId: "123" })
+            return schema.vans.all()
         })
 
         this.get("/host/vans/:vanid", (schema, request) => {
             // Hard-code the hostId for now
             const id = request.params.vanid
             // return schema.vans.findBy({ id, hostId: "123" })
-            return schema.vans.findBy({ vanid })
+            return schema.vans.find(vanid)
             // return schema.vans.all()
         })
     }

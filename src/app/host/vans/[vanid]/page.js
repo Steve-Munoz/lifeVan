@@ -6,22 +6,23 @@ import Link from "next/link"
 import "../../../server"
 
 export default function HostSelectedVan(){
-    const [currentVan, setCurrentVan] = useState(null)
+    const [currentHostVan, setCurrentHostVan] = useState(null)
     const params = useParams()
 
-    useEffect(()=>{
-        fetch(`/api/vans/${params.vanid}`).then(res=>res.json()).then(data=>setCurrentVan(data.vans))
-    })
 
-    // if(!currentVan){
-    //     return <h1>Loading..</h1>
-    // }
+    useEffect(()=>{
+        fetch(`/api/vans/${params.vanid}`).then(res=>res.json()).then(data=>setCurrentHostVan(data.vans))
+    },[])
+
+    if(!currentHostVan){
+        return <h1>Loading..</h1>
+    }
 
     return(
         <>
         <div>
-            {currentVan.name}
-        </div>
+            test
+            </div>
         </>
     )
 }

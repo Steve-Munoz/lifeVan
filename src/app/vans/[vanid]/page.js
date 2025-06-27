@@ -1,11 +1,16 @@
 "use client"
 import React, {useEffect, useState} from "react"
+import {useParams} from "next/navigation"
 import "../../server"
 
 
-export default function VanDetails({params}){
-    const [vanDetails, setVanDetails] = useState(null)
+export default function VanDetails(){
+    const [vanDetails, setVanDetails] = useState([])
+    const params = useParams()
     useEffect(()=>{fetch(`/api/vans/${params.vanid}`).then(res=>res.json()).then(data=>setVanDetails(data.vans))},[])
+
+    console.log(vanDetails)
+    // console.log(params)
     return(
         <>
         <div>
