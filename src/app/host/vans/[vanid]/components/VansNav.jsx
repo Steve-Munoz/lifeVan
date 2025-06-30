@@ -9,9 +9,9 @@ export default function HostVansNav({
 }){
     const params = useParams()
     const navigation =[
-            {path: `/host/vans/${params.vanid}/details`, name: 'Details' },
+            {path: `/host/vans/${params.vanid}/hostVanDetail`, name: 'Details' },
             {path: `/host/vans/${params.vanid}/hostVanPricing`, name: 'Pricing' },
-            {path: `/host/vans/${params.vanid}/Photos`, name: 'Photos' },
+            {path: `/host/vans/${params.vanid}/hostVanPhotos`, name: 'Photos' },
         ]
         const pathname = usePathname()
         const isActive = (path) => path === pathname;
